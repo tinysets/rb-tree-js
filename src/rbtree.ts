@@ -242,7 +242,7 @@ export class RBTree {
                                 return;
                             }
                         } else {
-                            if (!this.isLeftNode(node)) {// case4
+                            if (!this.isLeftNode(node)) {// case3
                                 pp.color = RBColor.RED;
                                 parent.color = RBColor.BLACK;
                                 this.leftRotate(pp);
@@ -253,7 +253,7 @@ export class RBTree {
                                 return;
                             }
                         }
-                    } else { // unclec.color == red
+                    } else { // uncle.color == red
                         parent.color = RBColor.BLACK;
                         uncle.color = RBColor.BLACK;
                         pp.color = RBColor.RED;
